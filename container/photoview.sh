@@ -13,7 +13,7 @@ sudo add-apt-repository ppa:strukturag/libde265
 
 # Install Node 16 and NPM
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-yes | sudo apt install nodejs
+sudo apt install nodejs
 
 # Download and install Go
 wget https://golang.org/dl/go1.16.linux-amd64.tar.gz
@@ -32,7 +32,7 @@ curl -o /opt/photoview/ui/vite.config.js https://raw.githubusercontent.com/acort
 npm run build
 
 # Build the API back-end and copy needed files
-cd ../api
+cd opt/photoview/api
 yes | go build -v -o photoview .
 cd ..
 mkdir app
