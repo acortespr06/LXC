@@ -51,6 +51,6 @@ yes | sudo apt-get install golang-go
 go build -v -o photoview .
 cd ..
 mkdir app
-cp -r ui/build/ app/ui/
+cp -r ui/dist/ app/ui/
 cp api/photoview app/photoview
 cp -r api/data/ app/data/
