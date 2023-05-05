@@ -28,6 +28,7 @@ git clone https://github.com/photoview/photoview.git
 cd photoview/ui
 npm install
 npx update-browserslist-db@latest
+curl -o /opt/photoview/ui/vite.config.js https://raw.githubusercontent.com/acortespr06/LXC/main/misc/config/vite.config.js
 npm run build
 
 # Build the API back-end and copy needed files
