@@ -8,8 +8,8 @@ yes | sudo apt upgrade
 yes | sudo apt install git curl wget software-properties-common libdlib-dev libblas-dev libatlas-base-dev liblapack-dev libjpeg-turbo8-dev build-essential libdlib19 libdlib-dev libjpeg-dev libheif-dev pkg-config gpg
 
 # Add repositories for libheif and libde265
-sudo add-apt-repository ppa:strukturag/libheif
-sudo add-apt-repository ppa:strukturag/libde265
+sudo add-apt-repository ppa:strukturag/libheif --yes
+sudo add-apt-repository ppa:strukturag/libde265 --yes
 
 # Install Node 16 and NPM
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
