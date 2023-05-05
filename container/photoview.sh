@@ -44,7 +44,8 @@ curl -o /opt/photoview/ui/vite.config.js https://raw.githubusercontent.com/acort
 npm run build
 
 # Build the API back-end and copy needed files
-cd opt/photoview/api
+cd ..
+cd /opt/photoview/api
 yes | go build -v -o photoview .
 cd ..
 mkdir app
