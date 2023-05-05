@@ -46,7 +46,7 @@ npm run build
 # Build the API back-end and copy needed files
 cd ..
 cd /opt/photoview/api
-yes | go build -v -o photoview .
+go build -v -o photoview .
 cd ..
 mkdir app
 cp -r ui/build/ app/ui/
