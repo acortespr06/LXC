@@ -27,6 +27,7 @@ cd /opt
 git clone https://github.com/photoview/photoview.git
 cd photoview/ui
 npm install
+npx update-browserslist-db@latest
 npm run build
 
 # Build the API back-end and copy needed files
