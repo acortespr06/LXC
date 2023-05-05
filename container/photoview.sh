@@ -46,8 +46,8 @@ npm run build
 # Build the API back-end and copy needed files
 cd ..
 cd opt/photoview/api
-sudo apt-get update
-sudo apt-get install golang-go
+yes | sudo apt-get update
+yes | sudo apt-get install golang-go
 go build -v -o photoview .
 cd ..
 mkdir app
