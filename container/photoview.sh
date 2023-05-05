@@ -1,5 +1,16 @@
 #!/bin/bash
 
+check_linux_version() {
+  version=$(lsb_release -rs)
+  if [ "$version" != "22.04" ] && [ "$version" != "22.04 LTS" ]; then
+    echo "This script requires Ubuntu 22.04, but you are running version $version."
+    exit 1
+  fi
+}
+
+# Call the function to check the Linux version
+check_linux_version
+
 # Update and upgrade computer
 sudo apt update
 yes | sudo apt upgrade
