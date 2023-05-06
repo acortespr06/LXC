@@ -54,3 +54,13 @@ mkdir app
 cp -r ui/dist/ app/ui/
 cp api/photoview app/photoview
 cp -r api/data/ app/data/
+
+# Install MySQL server and client
+UBUNTU_FRONTEND=noninteractive apt-get -y install mysql-server mysql-client
+# Create new user named 'photoview'
+mysql -u root -p -e "CREATE USER 'photoview'@'localhost' IDENTIFIED BY 'Photo_Secret#12345';"
+# Create new database named 'photoview'
+mysql -u root -p -e "CREATE DATABASE photoview;"
+# Grant user full access to the newly created database
+mysql -u root -p -e "GRANT ALL PRIVILEGES ON photoview.* TO 'photoview'@'localhost';"
+
