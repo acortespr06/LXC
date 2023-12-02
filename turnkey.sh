@@ -80,7 +80,7 @@ PASS="$(openssl rand -base64 8)"
 CTID=$(pvesh get /cluster/nextid)
 PCT_OPTIONS="
     -features keyctl=1,nesting=1
-    -hostname turnkey-${turnkey}
+    -hostname ${turnkey}
     -tags proxmox-helper-scripts
     -onboot 1
     -cores 2
