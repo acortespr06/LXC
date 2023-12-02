@@ -65,27 +65,7 @@ while read -r TAG ITEM; do
   TURNKEY_MENU+=("$TAG" "$ITEM " "OFF")
 done < <(
   cat <<EOF
-ansible Ansible
-bookstack BookStack
-core Core
-faveo-helpdesk Faveo Helpdesk
-fileserver File Server
-gallery Gallery
-gameserver Game Server
-gitea Gitea
-gitlab GitLab
-invoice-ninja Invoice Ninja
-mediaserver Media Server
 nextcloud Nextcloud
-observium Observium
-odoo Odoo
-openvpn OpenVPN
-owncloud ownCloud
-phpbb phpBB
-torrentserver Torrent Server
-wireguard WireGuard
-wordpress Wordpress
-zoneminder ZoneMinder
 EOF
 )
 turnkey=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "TurnKey LXCs" --radiolist "\nSelect a TurnKey LXC to create:\n" 16 $((MSG_MAX_LENGTH + 58)) 6 "${TURNKEY_MENU[@]}" 3>&1 1>&2 2>&3 | tr -d '"') || exit
