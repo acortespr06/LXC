@@ -3,7 +3,7 @@ Testing deployments for Proxmox LXC
 
 ## Installation
 
-### Photoview
+### APP
 ```
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/acortespr06/LXC/main/container/photoview.sh)"
+bash -c "$(wget -qLO - PASTLINK)"
 ```
